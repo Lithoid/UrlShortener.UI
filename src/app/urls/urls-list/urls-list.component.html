@@ -1,0 +1,34 @@
+
+<app-add-url></app-add-url>
+
+<div class="container my-5">
+
+
+<h1 class="mb-3">Urls</h1>
+
+<table class="table" *ngIf="urls && urls.length>0">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>OriginalUrl</th>
+            <th>ShortUrl</th>
+            <th>CretedDate</th>
+            <th>UserName</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+         <tr *ngFor="let url of urls">
+            <td>{{url.id}}</td>
+            <td>{{url.originalUrl}}</td>
+            <td><a [href]="url.shortUrl">{{url.shortUrl}}</a></td>
+            <td>{{url.createdDate}}</td>
+            <td>{{url.userName}}</td>
+            <td><a [routerLink]="['/urls','edit',url.id]">Edit</a></td>
+         </tr>
+    </tbody>
+</table>
+<p *ngIf="!urls||urls.length<=0">No urls found</p>
+
+</div>

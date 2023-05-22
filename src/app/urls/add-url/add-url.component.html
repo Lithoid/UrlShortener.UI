@@ -1,0 +1,14 @@
+<div class="container my-5"> 
+    <h1 class="mb-3">Add new</h1>
+
+
+    <form #form="ngForm" (ngSubmit)="addUrl()">
+        <div class="mb-3">
+            <label for="url" class="form-label">Url</label>
+            <input type="text" class="form-control" id="url"
+            name="originalUrl" [(ngModel)]="addUrlRequest.originalUrl" >
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>

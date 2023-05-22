@@ -1,0 +1,34 @@
+<div class="container my-5"> 
+    <h1 class="mb-3">Edit/Details</h1>
+    <button type="button" (click)="onDeleteClick(urlDetails.id)" class="btn btn-primary">Delete record</button>
+
+    <form #form="ngForm" (ngSubmit)="editUrl()">
+        <div class="mb-3">
+            <label for="url" class="form-label">Id</label>
+            <input type="text" class="form-control" id="url" readonly
+            name="id" [(ngModel)]="urlDetails.id" >
+          </div>
+          <div class="mb-3">
+            <label for="url" class="form-label">OriginalUrl</label>
+            <input type="text" class="form-control" id="url"
+            name="originalUrl" [(ngModel)]="urlDetails.originalUrl" >
+          </div>
+          <div class="mb-3">
+            <label for="url" class="form-label">ShortUrl</label>
+            <input type="text" class="form-control" id="url" readonly
+            name="shortUrl" [(ngModel)]="urlDetails.shortUrl" >
+          </div>
+          <div class="mb-3">
+            <label for="url" class="form-label">CreatedDate</label>
+            <input type="text" class="form-control" id="url" readonly
+            name="createdDate" [(ngModel)]="urlDetails.createdDate" >
+          </div>
+          <div class="mb-3">
+            <label for="url" class="form-label">UserName</label>
+            <input type="text" class="form-control" id="url" readonly="readonly" 
+            name="userName" [(ngModel)]="urlDetails.userName" >
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
